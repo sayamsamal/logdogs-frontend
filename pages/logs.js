@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 import LogCard from "../components/logcard";
 
 import { useTheme } from "next-themes";
@@ -11,14 +10,14 @@ const data = [
     desc: `userid: #2209988
   Username: jackreacher`,
     time: "26 Dec 2021 07:02:33",
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "User Login",
     desc: `userid: #2209988
     Username: jackreacher`,
     time: "26 Dec 2021 07:02:40",
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "User Joined Waitlist",
@@ -26,14 +25,14 @@ const data = [
     Username: jackreacher`,
     time: "26 Dec 2021 07:02:42",
     isNotify: true,
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "New Order Placed",
     desc: `userid: #2209988
     orderid: #9082781`,
     time: "26 Dec 2021 07:03:20",
-    isShopping: true,
+    icon: "shopping",
   },
   {
     title: "Running DB Migrations",
@@ -41,7 +40,15 @@ const data = [
     orderid: #9082781`,
     time: "26 Dec 2021 07:07:10",
     color: "bg-amber-400",
-    isDB: true,
+    icon: "db",
+  },
+  {
+    title: "Grafana Error",
+    desc: `Instant Query Failed`,
+    time: "26 Dec 2021 07:07:13",
+    color: "bg-red-400",
+    isCritical: true,
+    icon: "critical",
   },
 ];
 

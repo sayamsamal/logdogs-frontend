@@ -1,49 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { CopyBlock, atomOneDark, CodeBlock } from "react-code-blocks";
 import { useTheme } from "next-themes";
 import LogCard from "../components/logcard";
-
-import { ShoppingCartIcon } from "@heroicons/react/solid";
-
-const customTheme = {
-  lineNumberColor: `#b9b5b8`,
-  lineNumberBgColor: `#322931`,
-  backgroundColor: `#151718`,
-  textColor: `#55b5db`,
-  substringColor: `#b9b5b8`,
-  keywordColor: `##e6cd69`,
-  attributeColor: `#dd464c`,
-  selectorAttributeColor: `#dd464c`,
-  docTagColor: `#b9b5b8`,
-  nameColor: `#dd464c`,
-  builtInColor: `#fd8b19`,
-  literalColor: `#fd8b19`,
-  bulletColor: `#8fc13e`,
-  codeColor: `#b9b5b8`,
-  additionColor: `#8fc13e`,
-  regexpColor: `#dd464c`,
-  symbolColor: `#8fc13e`,
-  variableColor: `#dd464c`,
-  templateVariableColor: `#dd464c`,
-  linkColor: `#dd464c`,
-  selectorClassColor: `#dd464c`,
-  typeColor: `#fd8b19`,
-  stringColor: `##55b5db`,
-  selectorIdColor: `#dd464c`,
-  quoteColor: `#989498`,
-  templateTagColor: `#b9b5b8`,
-  deletionColor: `#dd464c`,
-  titleColor: `#1290bf`,
-  sectionColor: `#1290bf`,
-  commentColor: `#989498`,
-  metaKeywordColor: `#b9b5b8`,
-  metaColor: `#149b93`,
-  functionColor: `#1290bf`,
-  numberColor: `#fd8b19`,
-};
 
 const data = [
   {
@@ -51,14 +11,14 @@ const data = [
     desc: `userid: #2209988
   Username: jackreacher`,
     time: "26 Dec 2021 07:02:33",
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "User Login",
     desc: `userid: #2209988
     Username: jackreacher`,
     time: "26 Dec 2021 07:02:40",
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "User Joined Waitlist",
@@ -66,14 +26,14 @@ const data = [
     Username: jackreacher`,
     time: "26 Dec 2021 07:02:42",
     isNotify: true,
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "New Order Placed",
     desc: `userid: #2209988
     orderid: #9082781`,
     time: "26 Dec 2021 07:03:20",
-    isShopping: true,
+    icon: "shopping",
   },
   {
     title: "Running DB Migrations",
@@ -81,7 +41,7 @@ const data = [
     orderid: #9082781`,
     time: "26 Dec 2021 07:07:10",
     color: "bg-amber-400",
-    isDB: true,
+    icon: "db",
   },
   {
     title: "Grafana Error",
@@ -89,6 +49,7 @@ const data = [
     time: "26 Dec 2021 07:07:13",
     color: "bg-red-400",
     isCritical: true,
+    icon: "critical",
   },
 ];
 
@@ -98,14 +59,14 @@ const data2 = [
     desc: `userid: #2209988
   Username: jackreacher`,
     time: "26 Dec 2021 07:02:35",
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "User Made Purchase",
     desc: `userid: #2209988
     Username: jackreacher`,
     time: "26 Dec 2021 07:02:40",
-    isShopping: true,
+    icon: "shopping",
   },
   {
     title: "User Upgraded Plan",
@@ -113,7 +74,7 @@ const data2 = [
     Username: jackreacher`,
     time: "26 Dec 2021 07:03:45",
     isNotify: true,
-    isUserAdded: true,
+    icon: "user-added",
   },
   {
     title: "Version 1.05 Deployed",
@@ -121,6 +82,7 @@ const data2 = [
     time: "26 Dec 2021 07:03:50",
     color: "bg-green-400",
     isCritical: true,
+    icon: "critical",
   },
   {
     title: "Application Down",
@@ -128,6 +90,7 @@ const data2 = [
     time: "26 Dec 2021 07:04:00",
     color: "bg-red-400",
     isCritical: true,
+    icon: "critical",
   },
   {
     title: "Restarting Application",
@@ -135,6 +98,7 @@ const data2 = [
     time: "26 Dec 2021 07:04:10",
     color: "bg-amber-400",
     isCritical: true,
+    icon: "critical",
   },
 ];
 
